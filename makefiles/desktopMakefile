@@ -1,0 +1,12 @@
+SRCS := $(shell find source -name '*.c')
+
+OBJS := $(SRCS:.c=.o)
+
+%.o: %.c
+	gcc -c $< -o $@ -lGL -lGLU -lglut -I$(PWD)/include -g -lSDL2 -lGL -lGLU
+
+jsrf: $(OBJS)
+	gcc $^ -o $@ -lGL -lGLU -lglut -g -lSDL2 -lGL -lGLU
+
+clean:
+	rm -f $(OBJS) jsrf
