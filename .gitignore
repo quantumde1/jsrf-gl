@@ -6,3 +6,4 @@ dc_assets
 .ccls*
 .ccls
 *.o*
+*miniaudio*

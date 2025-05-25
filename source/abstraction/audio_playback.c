@@ -42,5 +42,4 @@ void audioPlayback(char* filename) {
     writeln("Init audio playback");
     thd_create(0, audio_thread, filename);
 }
-
 #endif
